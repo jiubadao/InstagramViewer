@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.codepath.instagramviewer.RoundedImageView
+        android:id="@+id/ivUserProfilePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_launcher_old"
+        />
+    
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ivUserProfilePic"
+        android:paddingLeft="10dp"
+        android:paddingTop="15dp"
+        android:text="@string/caption_default_text" />
+    
+    <com.codepath.instagramviewer.DynamicImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ivUserProfilePic"
+        android:src="@drawable/ic_launcher_old" />
+
+    <TextView
+        android:id="@+id/tvCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ivPhoto"
+        android:paddingBottom="1dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:textSize="14sp"
+        android:text="@string/caption_default_text" />
+    
+    <ImageView
+        android:id="@+id/ivLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvCaption"
+        android:src="@drawable/like" />
+
+    <TextView
+        android:id="@+id/tvLikesCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvUsername"
+        android:layout_alignTop="@+id/ivLike"
+        android:paddingTop="15dp"
+        android:text="@string/likes_count_default_text"
+        />
+    
+    <TextView
+        android:id="@+id/tvLastCommentUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ivLike"
+        android:paddingTop="4dp"
+        android:paddingLeft="5dp"
+        android:text="@string/likes_count_default_text"
+        />
+    
+    <TextView
+        android:id="@+id/tvLastComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/ivLike"
+        android:layout_toRightOf="@+id/tvLastCommentUsername"
+        android:text="@string/likes_count_default_text"
+        />
+	
+    <TextView
+        android:id="@+id/tvSecondLastCommentUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvLastCommentUsername"
+        android:paddingTop="2dp"
+        android:paddingLeft="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/likes_count_default_text"
+        />
+    
+    <TextView
+        android:id="@+id/tvSecondLastComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp"
+        android:paddingLeft="5dp"
+        android:layout_below="@+id/tvLastCommentUsername"
+        android:layout_toRightOf="@+id/tvSecondLastCommentUsername"
+        android:text="@string/likes_count_default_text"
+        />
+	
+</RelativeLayout>
