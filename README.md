@@ -26,5 +26,5 @@ MIT
 
 Screenshots
 -----------
-![Alt text](screenshots/todo_pro_1.gif?raw=true)
+![Alt text](insta_viewer.gif?raw=true)
 
