@@ -22,7 +22,28 @@
         android:paddingLeft="10dp"
         android:paddingTop="15dp"
         android:text="@string/caption_default_text" />
-    
+        
+    <TextView
+        android:id="@+id/tvTimeLapsed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"        
+        android:text="@string/caption_default_text"
+        android:textColor="#B0B0B0"
+        />
+
+    <ImageView
+        android:id="@+id/ivTimeLapsed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="5dp"
+        android:paddingTop="15dp"        
+        android:layout_toLeftOf="@+id/tvTimeLapsed"
+        android:src="@drawable/time_lapsed" />
+	
     <com.codepath.instagramviewer.DynamicImageView
         android:id="@+id/ivPhoto"
         android:layout_width="match_parent"
@@ -110,5 +131,5 @@
         android:layout_toRightOf="@+id/tvSecondLastCommentUsername"
         android:text="@string/likes_count_default_text"
         />
-	
+    
 </RelativeLayout>

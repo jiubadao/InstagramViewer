@@ -111,6 +111,7 @@ public class PhotosActivity extends Activity {
 	    					}
 	    					
 	    					// get image related info
+	    					photo.setCreatedTime(photoJSON.getLong("created_time"));
 	    					photo.setImageUrl(photoJSON.getJSONObject("images").getJSONObject("standard_resolution").getString("url"));
 	    					photo.setImageHeight(photoJSON.getJSONObject("images").getJSONObject("standard_resolution").getInt("height"));
 	    					

@@ -25,6 +25,7 @@ public class InstagramPhotoAdapter extends ArrayAdapter<InstagramPhoto> {
     private static class ViewHolder {
     	RoundedImageView ivUserProfilePic;
 		TextView tvUsername;
+		TextView tvTimeLapsed;
 		TextView tvCaption;
 		ImageView ivPhoto;
 		TextView tvLikesCount;
@@ -53,6 +54,7 @@ public class InstagramPhotoAdapter extends ArrayAdapter<InstagramPhoto> {
 			convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_photos, parent, false);
 			viewHolder.ivUserProfilePic = (RoundedImageView) convertView.findViewById(R.id.ivUserProfilePic);
 			viewHolder.tvUsername = (TextView) convertView.findViewById(R.id.tvUsername);
+			viewHolder.tvTimeLapsed = (TextView) convertView.findViewById(R.id.tvTimeLapsed);
 			viewHolder.tvCaption = (TextView) convertView.findViewById(R.id.tvCaption);
 			viewHolder.ivPhoto = (ImageView) convertView.findViewById(R.id.ivPhoto);
 			viewHolder.tvLikesCount = (TextView) convertView.findViewById(R.id.tvLikesCount);
@@ -63,6 +65,7 @@ public class InstagramPhotoAdapter extends ArrayAdapter<InstagramPhoto> {
 
 			// set the fonts
 			applySecondaryFont(viewHolder.tvUsername);
+			applySecondaryFont(viewHolder.tvTimeLapsed);			
 			applyPrimaryFont(viewHolder.tvCaption);
 			applySecondaryFont(viewHolder.tvLikesCount);	
 			applySecondaryFont(viewHolder.tvLastCommentUsername);
@@ -70,7 +73,7 @@ public class InstagramPhotoAdapter extends ArrayAdapter<InstagramPhoto> {
 			applySecondaryFont(viewHolder.tvSecondLastCommentUsername);
 			applyPrimaryFont(viewHolder.tvSecondLastComment);
 			
-			convertView.setTag(viewHolder);
+			convertView.setTag(viewHolder);			
 		}
 		else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -78,6 +81,7 @@ public class InstagramPhotoAdapter extends ArrayAdapter<InstagramPhoto> {
 		
 		// setting the photo props to all the view elements
 		viewHolder.tvUsername.setText(photo.getUsername());
+		viewHolder.tvTimeLapsed.setText(photo.getRelativeTime());
 		if (photo.getCaption() == null || photo.getCaption().equals("")){
 			viewHolder.tvCaption.setVisibility(View.GONE);
 		}
@@ -110,7 +114,7 @@ public class InstagramPhotoAdapter extends ArrayAdapter<InstagramPhoto> {
 		
 		// used picasso lib to load the image from the specified url and set it to the imageView
 		Picasso.with(getContext()).load(photo.getUserProfilePicUrl()).into(viewHolder.ivUserProfilePic);
-		Picasso.with(getContext()).load(photo.getImageUrl()).into(viewHolder.ivPhoto);
+		Picasso.with(getContext()).load(photo.getImageUrl()).into(viewHolder.ivPhoto);		
 		
 		return convertView;
 	}

@@ -1,8 +1,11 @@
 package com.codepath.instagramviewer;
 
+import android.text.format.DateUtils;
+
 public class InstagramPhoto {
 
 	private String username;
+	private Long createdTime; 
 	private String userProfilePicUrl;
 	private String caption;
 	private String imageUrl;
@@ -12,12 +15,18 @@ public class InstagramPhoto {
 	private String lastComment;
 	private String secondLastCommentUsername;
 	private String secondLastComment;
-		
+	
 	public String getUsername() {
 		return username;
 	}
 	public void setUsername(String username) {
 		this.username = username;
+	}
+	public Long getCreatedTime() {
+		return createdTime;
+	}
+	public void setCreatedTime(Long createdTime) {
+		this.createdTime = createdTime;
 	}
 	public String getUserProfilePicUrl() {
 		return userProfilePicUrl;
@@ -73,6 +82,8 @@ public class InstagramPhoto {
 	public void setSecondLastComment(String secondLastComment) {
 		this.secondLastComment = secondLastComment;
 	}	
-	
+	public String getRelativeTime(){
+		return DateUtils.getRelativeTimeSpanString(createdTime * 1000, System.currentTimeMillis(), DateUtils.FORMAT_ABBREV_RELATIVE).toString();
+	}
 	
 }
