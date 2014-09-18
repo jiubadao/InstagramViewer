@@ -3,22 +3,22 @@ Instagram Viewer App
 
 User Stories covered
 --------------------
-- [ ] User can scroll through current popular photos from Instagram
-- [ ] For each photo displayed, user can see the following details:
-- [ ] Graphic, Caption, Username
+- [x] User can scroll through current popular photos from Instagram
+- [x] For each photo displayed, user can see the following details:
+- [x] Graphic, Caption, Username
 
 Optional User Stories covered
 -----------------------------
-- [ ] Relative Timestamp (Not shown in the demo, but the code is checked in)
-- [ ] Like count, 
-- [ ] User Profile image
+- [x] Relative Timestamp (Code is checked in, shall update the demo gif)
+- [x] Like count, 
+- [x] User Profile image
 
 Advanced
 --------
-- [ ] Added PullToRefreshView
-- [ ] Shown latest 2 comments for each photo 
-- [ ] Implemented ViewHolder pattern to load adapter view faster and smoother
-- [ ] App Tested using Genymotion Emulator & Nexus 5
+- [x] Added PullToRefreshView
+- [x] Shown latest 2 comments for each photo 
+- [x] Implemented ViewHolder pattern to load adapter view faster and smoother
+- [x] App Tested using Genymotion Emulator & Nexus 5
 
 License
 -------
